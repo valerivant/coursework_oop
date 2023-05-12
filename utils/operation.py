@@ -1,7 +1,8 @@
-from sort_func import sort_func
+from utils.sort_by_date import sort_func
 
 
 def operation_executed():
+    """функция добавления в список и последующего вывода нужной инфы по банк. операциям"""
     sorted_by_state = []
     for item in sort_func():
         if "EXECUTED" in item['state']:
@@ -15,3 +16,4 @@ def operation_executed():
                 f"{item['operationAmount']['amount']}{item['operationAmount']['currency']['code']}"
             )
     return '\n\n'.join(sorted_by_state[:5])
+print(operation_executed())
