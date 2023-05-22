@@ -6,3 +6,6 @@
 # <дата перевода> <описание перевода>
 # <откуда> -> <куда>
 # <сумма перевода> <валюта>
+
+# install requirements ----> pip install -r requirements
+# start ----> python3 main.py
