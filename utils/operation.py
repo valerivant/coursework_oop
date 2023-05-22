@@ -12,8 +12,11 @@ def operation_executed():
             private_number = card_digit[:6] + len(card_digit[6:-4]) * "*" + card_digit[-4:]
             number_card = f"{private_number[0:4]} {private_number[4:8]} {private_number[8:12]} {private_number[-4:]}"
             sorted_by_state.append(
-                f"{item['date'][:10]} {item['description']}\n{card_text} {number_card} ---> **{item['to'][-4:]}\n"
+                f"{item['date'][8:10]}{item['date'][4:7]}-{item['date'][:4]} {item['description']}\n{card_text} "
+                f"{number_card} ---> **{item['to'][-4:]}\n"
                 f"{item['operationAmount']['amount']}{item['operationAmount']['currency']['code']}"
             )
     return '\n\n'.join(sorted_by_state[:5])
-print(operation_executed())
+
+
+
